@@ -4,6 +4,7 @@ MAINTAINER Kristof Coomans "kristof@2dotstwice.be"
 ENV REFRESHED_AT "2017-02-17 08:08:00"
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y update && \
+    DEBIAN_FRONTEND=noninteractive apt-get -y upgrade && \
     DEBIAN_FRONTEND=noninteractive apt-get -y --fix-missing --no-install-recommends -q install \
         software-properties-common && \
     LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php && \
